@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 	"main.go/helper"
 )
 	
@@ -36,6 +37,7 @@ func main() {
 		if isvalidName && isvalidEmailAddress && isvalidTickets {
 
 			bookTicket(userTickets, firstName, lastName, emailAdress)
+			go sendTickets(userTickets, firstName, lastName, emailAdress)
 
 			firstNames := printFirstnames()
 			fmt.Printf("the whole bookings: %v\n", firstNames)
@@ -108,4 +110,12 @@ func bookTicket(userTickets uint, firstName string, lastName string, emailAdress
 	fmt.Printf("List of bookings %v\n", userData)
 	fmt.Printf("Thank you %v %v booked %v tickets. you will receive confirmation email at %v\n", firstName, lastName, userTickets, emailAdress)
 	fmt.Printf("%v remain tickets for %v\n", remainTickets, conferenceName)
+}
+
+func sendTickets(userTickets uint, firstName string, lastName string, emailAdress string) {
+	time.Sleep(time.Second * 10)
+	fmt.Println("####################")
+	var tickets = fmt.Sprintf("%v tickets is sending to %v %v\n", userTickets, firstName, lastName)
+	fmt.Printf("Sending tickets: \n %v to email %v \n", tickets, emailAdress)
+	fmt.Println("####################")
 }
