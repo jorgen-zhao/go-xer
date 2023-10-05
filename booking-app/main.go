@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
-	"main.go/helper"
+	"booking-app/helper"
 )
 	
 var conferenceName = "Go Conference"
