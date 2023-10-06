@@ -214,10 +214,15 @@ built-in functionality for goroutine to talk with one another
 
 comparison to other languages 
 
-| writing concurrent code | writing concurrent code is more complex 
-more overhead |
+| writing concurrent code | writing concurrent code is more complex more overhead |
 | --- | --- |
-| Threads vs Goroutines | creating threads is more expensive  slow startup time
-heavyweight and needs more hardware resources |
+| Threads vs Goroutines | creating threads is more expensive  slow startup time / heavyweight and needs more hardware resources |
 
 why? what is the different?
+| Goroutine | OS Threads |
+| --- | --- |
+| Go is using, what’s called a “green thread” | managed by kernel |
+| Abstraction of an actual thread  | are hardware depent |
+| Managed by the go runtime, we are only interacting with these high level goroutines | cost of these threads are higher |
+| cheaper & lightweight | higher start up time |
+| you can run hundreds of thousands or millons goroutines without affecting the performance  | -- |
