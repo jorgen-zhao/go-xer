@@ -4,7 +4,7 @@
 
 1. 2007 google 2009 open source
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0cf8e61f-2395-41dc-ba12-a9e865824c4e/e926f995-7774-4669-811b-91fd0dd5715d/Untitled.png)
+![go-history](./img/go-history.png)
 
 1. use cases 
     1. for performant applications 
@@ -226,3 +226,4 @@ why? what is the different?
 | Managed by the go runtime, we are only interacting with these high level goroutines | cost of these threads are higher |
 | cheaper & lightweight | higher start up time |
 | you can run hundreds of thousands or millons goroutines without affecting the performance  | -- |
+![go-thread](./img/go-thread.png)
